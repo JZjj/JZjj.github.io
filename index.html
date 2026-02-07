@@ -3,55 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JZjj</title>
+    <title>JZjj - The Adventurous Creative</title>
     <style>
-        /* Modern Apple/Google-inspired Styles */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #ffffff;
-            color: #1d1d1f;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Centers content vertically */
+            height: 100vh;
             text-align: center;
+            
+            /* Background Settings */
+            background-image: url('mountains.jpg'); /* Ensure the image is in the same folder */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f4f4f7; /* Fallback color */
         }
 
+        /* The Frosted Glass Container */
         .container {
-            padding: 20px;
+            padding: 60px 40px;
             max-width: 600px;
+            background: rgba(255, 255, 255, 0.7); /* White with 70% transparency */
+            backdrop-filter: blur(15px); /* This creates the "glass" effect */
+            -webkit-backdrop-filter: blur(15px); /* Safari support */
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         h1 {
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 700;
             letter-spacing: -0.015em;
             margin-bottom: 10px;
+            color: #1d1d1f;
         }
 
         p {
-            font-size: 24px;
-            color: #86868b; /* Subtle gray subtext */
+            font-size: 20px;
+            color: #424245; /* Darker gray for better readability against glass */
             margin-bottom: 40px;
         }
 
-        /* Modern pill-shaped button */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
         .btn {
             display: inline-block;
-            background-color: #0071e3; /* Classic Apple Blue */
+            background-color: #0071e3;
             color: white;
             padding: 12px 28px;
             border-radius: 980px;
             text-decoration: none;
             font-size: 17px;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .btn:hover {
             background-color: #0077ed;
             transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 113, 227, 0.3);
+        }
+
+        .about-link {
+            text-decoration: none; 
+            color: #1d1d1f; 
+            font-weight: 500; 
+            font-size: 15px;
+            margin-left: 10px;
+            opacity: 0.8;
+        }
+
+        .about-link:hover {
+            opacity: 1;
         }
     </style>
 </head>
@@ -59,15 +92,12 @@
 
     <div class="container">
         <h1>The Adventurous Creative</h1>
-        <p> Exploring World, Crafting Stories </p>
+        <p>Exploring World, Crafting Stories</p>
         
-        <a href="good-quotes.html" class="btn">
-            View Quotes Collection
-        </a>
-        <a href="blog.html" class="btn">
-            View Blog
-        </a>
-        <a href="about.html" style="text-decoration: none; color: #1d1d1f; font-weight: 500; font-size: 14px;">About</a>
+        <div class="btn-group">
+            <a href="good-quotes.html" class="btn">View Quotes</a>
+            
+        </div>
     </div>
 
 </body>
